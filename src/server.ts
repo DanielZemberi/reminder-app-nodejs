@@ -1,13 +1,16 @@
 import express from "express";
 require("dotenv").config();
+import RouterV1 from "./routes";
 
 const cors = require("cors");
 const app = express();
 const middleware = require("./middleware");
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 app.use(cors());
-app.use("/posts", require("./routes/testRoutes"));
+app.use(RouterV1);
 // app.use(middleware.decodeToken);
 
 app.get("/api/test", (req, res) => {
