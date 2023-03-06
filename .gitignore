@@ -1,0 +1,11 @@
+#dependencies
+/node_modules
+
+#firebase credentials
+firebaseServiceAccountKey.json
+
+#ENV
+.env
+.env.example.development
+.env.example.staging
+.enx.example.production
